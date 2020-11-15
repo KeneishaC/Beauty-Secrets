@@ -2,9 +2,9 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 
-const beauty =  new Schema ({
+const beautySchema = new Schema ({
     product: {
-        type: string,
+        type: String,
         required: true,
     },
     price: {
@@ -13,7 +13,7 @@ const beauty =  new Schema ({
     }, 
 
     location: {
-        type: string 
+        type: String 
         
     }, 
 }, {timestamps: true})

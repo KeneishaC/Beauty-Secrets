@@ -5,6 +5,8 @@ const port = 3000
 
 //router modules
 const indexRouter = require('./routes/index')
+const beautiesRouter = require('./routes/beauties')
+
 //create the express app
 const  app = express()
 
@@ -22,6 +24,8 @@ app.use(express.urlencoded({extended: false}))
 
 //mount routes
 app.use('/', indexRouter)
+app.use('/beauties', beautiesRouter)
+
 
 //tell the app to listen
 app.listen(port, function(){
