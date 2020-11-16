@@ -11,16 +11,18 @@
     <table>
         <thead>
             <th>Product</th>
+            <th>Category</th>
             <th>Price</th>
             <th>Location</th>
         </thead>
         <tbody>
-            <% beauties.foreach(function(b) {%> 
+            <% beauties.forEach(function(beauty) {%> 
                 <tr>
-                    <td><%= b.product %> </td>
-                    <td><%= b.price %> </td>
-                    <td><%= b.location %> </td>
-                
+                    <td><%= beauty.product %> </td>
+                    <td><%= beauty.category %> </td>
+                    <td><%= beauty.price %> </td>
+                    <td><%= beauty.location %> </td>
+                <a href="/beauties/<%=beauty.id  %>">More info</a>
                 </tr>
             <% }) %> 
         </tbody>

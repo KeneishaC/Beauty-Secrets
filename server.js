@@ -3,18 +3,20 @@ const morgan = require('morgan')
 const methodOverride = require('method-override')
 const port = 3000
 
+//require the db config module
+require('./config/database')
+
+
 //router modules
 const indexRouter = require('./routes/index')
 const beautiesRouter = require('./routes/beauties')
 
 //create the express app
-const  app = express()
+const app = express()
 
 //configure server setting
 app.set('view engine', 'ejs')
 
-//require the db config module
-require('./config/database')
 
 //mount middle ware
 app.use(morgan('dev'))

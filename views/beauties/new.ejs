@@ -9,15 +9,27 @@
     <h1>Share Your Beauty Sectets</h1>
     <h2>Enter a new Product</h2>
     <form action="/beauties" method="POST"></form>
+    <label>Brand
+        <input type="text" name="brandName" >
+    </label>
     <label>Product:
-        <input type="text" name="product">
+        <input type="text" name="productName">
+    </label>
+    <label> Category
+        <select name="category">
+            <option value="Oil Based Cleanser">Oil Based Cleanser</option>
+            <option value="Water Based Cleanser">Water Based Cleanser</option>
+            <option value="Toners/Serums">Toners/Serums</option>
+            <option value="Moisturizer">Moisturizer</option>
+            <option value="Face and Lip Mask">Face and Lip Mask</option>
+        </select>
     </label>
     <label>Price:
         <input type="text" name="price">
     </label>
-    <label>Location:
+    <label>Store:
         <input type="text" name="location">
     </label>
-    <input type="submit" value="Add">
+    <input type="submit" value="Let's go Beautiful">
 </body>
 </html>
