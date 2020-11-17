@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Beauty Secrets</title>
-</head>
-
-<body>
-    <h1>Share Your Beauty Sectets</h1>
-    <h2>Enter a new Product</h2>
+<%- include('../partials/header') %> 
     <form action="/beauties" method="POST">
         <label>Brand
             <input type="text" name="brandName">
@@ -47,6 +35,4 @@
         </label>
         <input type="submit" value="Let's go Beautiful">
     </form>
-</body>
-
-</html>
+<%- include('../partials/footer') %>

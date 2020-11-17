@@ -1,33 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Beauty Secrets</title>
-</head>
-<body>
-    <h1>Here are your Beauty Secrets</h1>
-    <table>
-        <thead>
-            <th>Brand</th>
-            <th>Product</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Location</th>
-        </thead>
-        <tbody>
-            <% beauties.forEach(function(beauty) {%> 
-                <tr>
-                    <td><%= beauty.brandName %> </td>
-                    <td><%= beauty.productName %> </td>
-                    <td><%= beauty.category %> </td>
-                    <td><%= beauty.price %> </td>
-                    <td><%= beauty.location %> </td>
-                    <td><a href="/beauties/<%=beauty.id  %>">More info</a></td>
-                </tr>
-            <% }) %> 
-        </tbody>
-    </table>
-</body>
-</html>
+<%- include('../partials/header') %>
+<div class="product-container">
+<% beauties.forEach(function(beauty) {%>
+<div class="show-page">
+   
+    <p class="brandName"><%= beauty.brandName %> </p>
+    <p class="productName" id="product-description"><%= beauty.productName %> </p>
+    <p class="category" id="product-description"><%= beauty.category %> </p>
+    <p class="price" id="product-description"><%= beauty.price %> </p>
+    <p class="location" id="product-description"><%= beauty.location %> </p>
+    <p><a href="/beauties/<%=beauty.id  %>">More info</a></p>
+</div>
+<% }) %>
+</div>
+<%- include('../partials/footer') %>
