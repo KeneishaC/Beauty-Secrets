@@ -1,8 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+const reviewSchema = new Schema({
+    content: String,
+    rating: String
+})
 
-const beautySchema = new Schema ({
+
+const beautiesSchema = new Schema ({
     brandName: {
         type: String,
         required: true,
@@ -27,4 +32,4 @@ const beautySchema = new Schema ({
     
 }, {timestamps: true})
 
-module.exports = mongoose.model('Beauty', beautySchema)
+module.exports = mongoose.model('Beautie', beautiesSchema)

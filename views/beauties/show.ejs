@@ -18,5 +18,39 @@
         <div>Location:</div>
         <div><%= beauty.location %> </div>
     </section>
+
+
+    <h2>Beauty Reviews</h2>
+    <form method="POST" action="/beauties/<%= beauty._id %>/reviews ">
+        <label for="">Review</label>
+        <textarea name="content" id="" cols="30" rows="10"></textarea>
+        <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <input type="submit" name="Add Beauty Review">
+    </form>
+
+    <% if (beauty.reviews.length) {%> 
+        <table>
+            <thead>
+                <th>Review</th>
+                <th>Rating</th>
+            </thead>
+            <tbody>
+                <% beauty.reviews.forEach(function(r){ %> 
+                    <tr>
+                        <td><%= r.content %> </td>
+                        <td><%= r.rating %> </td>
+                    </tr>
+                <% }); %> 
+            </tbody>
+        </table>
+    <% } else { %> 
+        <h4> No Beauty Review Yet</h4>
+    <% } %> 
 </body>
 </html>

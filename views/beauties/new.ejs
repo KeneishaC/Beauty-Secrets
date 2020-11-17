@@ -8,7 +8,7 @@
 <body>
     <h1>Share Your Beauty Sectets</h1>
     <h2>Enter a new Product</h2>
-    <form action="/beauties" method="POST"></form>
+    <form action="/beauties" method="POST">
     <label>Brand
         <input type="text" name="brandName" >
     </label>
@@ -24,12 +24,22 @@
             <option value="Face and Lip Mask">Face and Lip Mask</option>
         </select>
     </label>
-    <label>Price:
+    <label>Price: $
         <input type="text" name="price">
     </label>
     <label>Store:
-        <input type="text" name="location">
+        <select name="location">
+            <option value="CVS">CVS</option>
+            <option value="Online Retailer">Online Retailer</option>
+            <option value="Riley Rose">Riley Rose</option>
+            <option value="Sephora">Sephora</option>
+            <option value="Target">Target</option>
+            <option value="Ulta">Ulta</option>
+            <option value="Walgreens">Walgreens</option>
+            <option value="Walmart">Walmart</option>
+        </select>
     </label>
     <input type="submit" value="Let's go Beautiful">
+</form>
 </body>
 </html>

@@ -7,9 +7,6 @@ module.exports = {
     show,
 }
 
-function newBeauty(req, res) {
-    res.render('beauties/new')
-}
 
 function index(req, res) {
     Beauty.find({}, function (err, beauties) {
@@ -17,6 +14,10 @@ function index(req, res) {
             beauties
         })
     })
+}
+
+function newBeauty(req, res) {
+    res.render('beauties/new')
 }
 
 function create(req, res) {
@@ -30,7 +31,8 @@ function create(req, res) {
 function show(req, res) {
     Beauty.findById(req.params.id, function (err, beauty) {
         console.log(beauty)
-        res.render('beauties/show', {beauty})
+        res.render('beauties/show', {
+            beauty
+        })
     })
 }
-

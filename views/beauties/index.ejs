@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Beauty Secrets</title>
-</head>
+<%- include('../partials/header') %>
 <body>
     <h1>Here are your Beauty Secrets</h1>
     <table>
         <thead>
+            <th>Brand</th>
             <th>Product</th>
             <th>Category</th>
             <th>Price</th>
@@ -18,7 +12,8 @@
         <tbody>
             <% beauties.forEach(function(beauty) {%> 
                 <tr>
-                    <td><%= beauty.product %> </td>
+                    <td><%= beauty.brandName %> </td>
+                    <td><%= beauty.productName %> </td>
                     <td><%= beauty.category %> </td>
                     <td><%= beauty.price %> </td>
                     <td><%= beauty.location %> </td>
