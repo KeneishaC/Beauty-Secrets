@@ -1,14 +1,14 @@
+//mongodb+srv:/<username/password>@cluster0.lc7xb.mongodb.net/beauty-secrets?retryWrites=true&w=majority'
 //require modules 
 const mongoose = require('mongoose')
 
 // create shortcut variable 
 const db = mongoose.connection
 
-const connectionURI = 'mongodb+srv://admin:0730@cluster0.lc7xb.mongodb.net/beauty-secrets?retryWrites=true&w=majority'
 
 
 //connect to the database
-mongoose.connect(connectionURI, {
+mongoose.connect(process.env.DATABASE_URL, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true

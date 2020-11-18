@@ -4,14 +4,15 @@ Beauty Secrets is a crud app that allows users to upload skin care products that
 
 
 ## Technologies Used
+- Node.js
 - Express
 - MongoDB
+- Mongoose
 - CSS3
 - HTML5
 - Morgan 
-- Method-Overide
-- Mongoose
-- Ejs
+- EJS
+- Google Fonts
 
 ### Screenshots 
 ![ERD]

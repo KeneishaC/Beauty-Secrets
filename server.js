@@ -1,7 +1,10 @@
 const express = require('express')
 const morgan = require('morgan')
 const methodOverride = require('method-override')
+
 const port = 3000
+
+require('dotenv').config();
 
 //require the db config module
 require('./config/database')
@@ -10,7 +13,8 @@ require('./config/database')
 //router modules
 const homeRouter = require('./routes/home') 
 const beautiesRouter = require('./routes/beauties')
-const notesRouter = require('./routes/notes')
+const notesRouter = require('./routes/notes');
+const { Mongoose } = require('mongoose');
 
 //create the express app
 const app = express()

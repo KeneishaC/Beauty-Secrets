@@ -1,12 +1,12 @@
 const Beauty = require('../models/beauty')
 
 module.exports = {
-    new: newBeauty,
-    create,
     index,
-    show,
+    new: newBeauty,
+    delete: deleteBeauty,
+    create,
     //edit,
-    delete: deleteBeauty
+    show,
 }
 
 
@@ -22,6 +22,12 @@ function newBeauty(req, res) {
     res.render('beauties/new', {title: 'New Beauty Secret'})
 }
 
+function deleteBeauty (req, res) {
+   beauty.findByIdAndDelete(req.params.id, function(err, deleteBeauty) {
+        res.redirect('/beauties');
+   });
+}
+
 function create(req, res) {
     const beauty = new Beauty(req.body);
     beauty.save(function (err) {
@@ -29,6 +35,14 @@ function create(req, res) {
         res.redirect('/beauties')
     })
 }
+
+// function edit (req, res) {
+//     beauty.findById(req.params.id, function (err, beauty){
+//         console.log(beauty)
+//         res.redirect('beauties/new', { title: 'Edit Secret',
+//         beauty })
+//     })
+// }
 
 function show(req, res) {
     Beauty.findById(req.params.id, function (err, beauty) {
@@ -39,16 +53,4 @@ function show(req, res) {
     })
 }
 
-// function edit (req, res) {
-//     Note.findById(req.params.id, function (err, beauty){
-//         console.log(beauty)
-//         res.redirect('beauties/new', { title: 'Edit Secret',
-//         beauty })
-//     })
-// }
 
- function deleteBeauty (req, res) {
-    Note.findByIdAndDelete(req.params.id, function(err, deleteBeauty) {
-         res.redirect('/beauties');
-    });
- }
