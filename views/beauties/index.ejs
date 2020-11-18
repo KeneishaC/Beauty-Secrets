@@ -1,14 +1,17 @@
 <%- include('../partials/header') %>
 <div class="product-container">
-<% beauties.forEach(function(beauty, idx) {%>
+<% beauties.forEach(function(beauty) {%>
 <div class="show-page">
-   
+   <form action="/beauties/<%= beauty._id%>?method_DELETE" Method="POST">
+    <button type="submit">X</button>
+    </form>
+    <a href="/beauties/<%= beauty._id %>/edit "></a>
     <p class="brandName"><%= beauty.brandName %> </p>
     <p class="productName" id="product-description"><%= beauty.productName %> </p>
     <p class="category" id="product-description"><%= beauty.category %> </p>
     <p class="price" id="product-description"><%= beauty.price %> </p>
     <p class="location" id="product-description"><%= beauty.location %> </p>
-    <p><a href="/beauties/<%=beauty.id  %>">More info</a></p>
+    <p><a href="/beauties/<%=beauty.id  %>">Enter details</a></p>
 </div>
 <% }) %>
 </div>

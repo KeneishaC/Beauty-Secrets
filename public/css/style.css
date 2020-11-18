@@ -16,12 +16,12 @@ body {
 }
 
 #nav {
-    font-size: 20px;
+    font-size: 35px;
     background-color: var(--pale-color-3);
     color: black;
-    padding: 34px;
+    padding: 50px;
     display: flex;
-    justify-content: flex-end;
+    
 
 }
 
@@ -29,7 +29,11 @@ body {
     display: flex;
     color: var(--deep-fuscia-color);
     text-decoration: none;
-    align-content: space-around;
+    
+}
+
+h1{
+    font-size: 45px;
 }
 
 h1,
@@ -62,5 +66,9 @@ h2 {
 }
 
 #new.beauty{
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+
+

@@ -18,12 +18,12 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    <input type="submit" value="Add A New Notes">
+    <input type="submit" value="Add A New Note">
 </form>
 
 
 
-<% if (beauty.note.length) {%>
+<% if (beauty.notes.length) {%>
 <table>
     <thead>
         <tr>
@@ -33,7 +33,7 @@
         </tr>
     </thead>
     <tbody>
-        <% beauty.note.forEach(function(r) { %>
+        <% beauty.notes.forEach(function(r) { %>
         <tr>
             <td><%= r.createdAt.toLocaleDateString() %></td>
             <td><%= r.content %> </td>

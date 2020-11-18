@@ -5,7 +5,7 @@ module.exports = {
     create,
     index,
     show,
-    edit,
+    //edit,
     delete: deleteBeauty
 }
 
@@ -39,15 +39,16 @@ function show(req, res) {
     })
 }
 
-function edit (req, res) {
-    Note.findById(req.params.id, function (err, beauty){
-        res.render('beauties/edit', { title: 'Edit Secret',
-        beauty })
-    })
-}
+// function edit (req, res) {
+//     Note.findById(req.params.id, function (err, beauty){
+//         console.log(beauty)
+//         res.redirect('beauties/new', { title: 'Edit Secret',
+//         beauty })
+//     })
+// }
 
-function deleteBeauty (req, res) {
-    Note.findByIdAndDelete(req.params.id, function(err, deleteNote) {
-        res.redirect('/beauties');
+ function deleteBeauty (req, res) {
+    Note.findByIdAndDelete(req.params.id, function(err, deleteBeauty) {
+         res.redirect('/beauties');
     });
-}
+ }

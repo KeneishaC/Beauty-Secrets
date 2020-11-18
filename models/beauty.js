@@ -37,7 +37,7 @@ const beautiesSchema = new Schema ({
 
     location: String,
 
-    note: [ noteSchema ]
+    notes: [ noteSchema ]
     
 }, {timestamps: true})
 

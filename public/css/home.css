@@ -1,0 +1,35 @@
+:root {
+    --lightpink-color: #ffd1f2;
+    --peach-color: #fcc29d;
+    --bright-fuscia-color: #ff47d4;
+    --deep-fuscia-color: #cb2b92;
+    --pale-color-1: #edcad8;
+    --pale-color-2: #f7eaf7;
+    --pale-color-3: #f6eaeb;
+}
+
+body{
+    text-align: center;
+    padding: 250px;
+    border: 9px solid var(--pale-color-1);
+    border-radius: 10px;
+    background-image: url('/public/images/homepage.png');
+
+}
+
+h1{
+    font-size: 45px;
+}
+
+h1,
+h2 {
+    color: var(--deep-fuscia-color);
+    text-align: center;
+}
+
+div{
+    border: 5px solid var(--deep-fuscia-color);
+    border-radius: 5px;
+    width: 200px;
+
+}
