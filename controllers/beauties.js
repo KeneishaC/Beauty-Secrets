@@ -40,13 +40,14 @@ function show(req, res) {
 }
 
 function edit (req, res) {
-    res.render(`beauties/${beauty}`, {
-        beauty: beauties.getOne(req.params.id),
-        title: 'Edit Secret'
+    Note.findById(req.params.id, function (err, beauty){
+        res.render('beauties/edit', { title: 'Edit Secret',
+        beauty })
     })
 }
 
 function deleteBeauty (req, res) {
-    Beauty.deleteOne(req.params.id)
-    res.redirect('/beauties')
+    Note.findByIdAndDelete(req.params.id, function(err, deleteNote) {
+        res.redirect('/beauties');
+    });
 }

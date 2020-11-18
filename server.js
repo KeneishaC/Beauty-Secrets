@@ -8,7 +8,7 @@ require('./config/database')
 
 
 //router modules
-const indexRouter = require('./routes/index')
+const homeRouter = require('./routes/home') 
 const beautiesRouter = require('./routes/beauties')
 const notesRouter = require('./routes/notes')
 
@@ -26,7 +26,7 @@ app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 
 //mount routes
-app.use('/', indexRouter)
+app.use('/', homeRouter)
 app.use('/beauties', beautiesRouter)
 app.use('/', notesRouter)
 

@@ -2,7 +2,7 @@ const Beauty = require('../models/beauty');
 // const beauties = require('./beauties');
 
 module.exports = {
-    create,
+    create
 };
 
 function create (req, res) {
