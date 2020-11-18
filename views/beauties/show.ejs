@@ -1,19 +1,12 @@
 <%- include('../partials/header') %>
 <section>
-    <div>Brand:</div>
-    <div><%= beauty.brandName %> </div>
-    <div>Product:</div>
-    <div><%= beauty.productName %> </div>
-    <div>Category:</div>
-    <div><%= beauty.category %> </div>
-    <div>Price:</div>
-    <div><%= beauty.price %> </div>
-    <div>Location:</div>
-    <div><%= beauty.location %> </div>
-</section>
+    <p>Brand:</p>
+    <p><%= beauty.brandName %> </p>
+    <p>Product:</p>
+    <p><%= beauty.productName %> </p>
+</sectiop
 
-
-<h2>Beauty Reviews</h2>
+<h2>Add a note about your secret here</h2>
 
 <form method="POST" action="/beauties/<%= beauty._id %>/reviews">
     <label>Review</label>
@@ -25,7 +18,7 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    <input type="submit" value="Add Beauty Review">
+    <input type="submit" value="Add A New Notes">
 </form>
 
 
@@ -50,7 +43,7 @@
     </tbody>
 </table>
 <% } else { %>
-<h4> No Comments yet</h4>
+<h4> No notes</h4>
 <% } %>
 
 

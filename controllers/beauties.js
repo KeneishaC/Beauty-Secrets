@@ -5,6 +5,8 @@ module.exports = {
     create,
     index,
     show,
+    edit,
+    delete: deleteBeauty
 }
 
 
@@ -37,3 +39,14 @@ function show(req, res) {
     })
 }
 
+function edit (req, res) {
+    res.render(`beauties/${beauty}`, {
+        beauty: beauties.getOne(req.params.id),
+        title: 'Edit Secret'
+    })
+}
+
+function deleteBeauty (req, res) {
+    Beauty.deleteOne(req.params.id)
+    res.redirect('/beauties')
+}
