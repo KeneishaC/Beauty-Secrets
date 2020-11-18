@@ -10,6 +10,7 @@ require('./config/database')
 //router modules
 const indexRouter = require('./routes/index')
 const beautiesRouter = require('./routes/beauties')
+const notesRouter = require('./routes/notes')
 
 //create the express app
 const app = express()
@@ -27,6 +28,7 @@ app.use(express.urlencoded({extended: false}))
 //mount routes
 app.use('/', indexRouter)
 app.use('/beauties', beautiesRouter)
+app.use('/', notesRouter)
 
 
 //tell the app to listen

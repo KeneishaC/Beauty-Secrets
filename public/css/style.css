@@ -1,25 +1,35 @@
 :root {
     --lightpink-color: #ffd1f2;
     --peach-color: #fcc29d;
-    --bright--fuscia-color: #ff47d4;
+    --bright-fuscia-color: #ff47d4;
     --deep-fuscia-color: #cb2b92;
     --pale-color-1: #edcad8;
     --pale-color-2: #f7eaf7;
     --pale-color-3: #f6eaeb;
 }
 
+
 body {
     background-color: var;
+    margin: 0;
+    height: 100vh;
 }
 
 #nav {
+    font-size: 20px;
     background-color: var(--pale-color-3);
     color: black;
-    padding: 30px;
+    padding: 34px;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 .link {
+    display: flex;
     color: var(--deep-fuscia-color);
+    text-decoration: none;
+    align-content: space-around;
 }
 
 h1,
@@ -31,15 +41,15 @@ h2 {
 .product-container {
     display: flex;
     flex-direction: row;
-   
+
 }
 
 .show-page {
-    border: 3px solid var(--pale-color-1);
+    border: 8px solid var(--pale-color-3);
+    border-radius: 10px;
     flex-wrap: wrap;
     margin: 20px;
     width: 250px;
-
 }
 
 .brandName {
@@ -49,4 +59,8 @@ h2 {
 
 #product-description {
     font-size: 20px;
+}
+
+#new.beauty{
+
 }

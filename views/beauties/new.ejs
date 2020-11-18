@@ -1,4 +1,5 @@
-<%- include('../partials/header') %> 
+<%- include('../partials/header') %>
+<div id="new-beauty">
     <form action="/beauties" method="POST">
         <label>Brand
             <input type="text" name="brandName">
@@ -15,9 +16,6 @@
                 <option value="Face and Lip Mask">Face and Lip Mask</option>
             </select>
         </label>
-        <label>
-            <input type="file" name="image" id="img" accept="image/*">
-        </label>
         <label>Price: $
             <input type="text" name="price">
         </label>
@@ -33,6 +31,10 @@
                 <option value="Walmart">Walmart</option>
             </select>
         </label>
+        <label>
+            <input type="file" name="image" id="img" accept="image/*">
+        </label>
         <input type="submit" value="Let's go Beautiful">
     </form>
+</div>
 <%- include('../partials/footer') %>

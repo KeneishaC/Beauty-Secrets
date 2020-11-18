@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const reviewSchema = new Schema({
+const noteSchema = new Schema({
     content: String,
     rating: {
         type: Number,
@@ -35,7 +35,9 @@ const beautiesSchema = new Schema ({
         required: true,
     }, 
 
-    location: String 
+    location: String,
+
+    note: [ noteSchema ]
     
 }, {timestamps: true})
 
