@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1>Edit Your Beauty Secret Here</h1>
-<form action="/beauties/new <%= beauties._id %> ?_method=PUT " method="POST">
+<form action="/beauties/<%= beauty._id %>?_method=PUT " method="POST">
     <label>Brand
         <input type="text" name="brandName" value="<%= beauty.brandName %> ">
     </label>
@@ -18,7 +18,7 @@
         </select>
     </label>
     <label>Price: $
-        <input type="text" name="price" value="<%= beauty.price %> ">
+        <input type="text" name="price" >
     </label>
     <label>Store:
         <select name="location" value=<%= beauty.location %> >
@@ -35,8 +35,7 @@
     <label>
         <input type="file" name="image" id="img" accept="image/*" value="<%= beauty.image %> ">
     </label>
-    <input type="submit" value="Let's go Beautiful">
-<button type="submit"> Save Secret</button>
+    <input type="submit"  value="Submit">
 </form>
 
 

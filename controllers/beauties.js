@@ -5,7 +5,8 @@ module.exports = {
     new: newBeauty,
     delete: deleteBeauty,
     create,
-    //edit,
+    edit,
+    update,
     show,
 }
 
@@ -23,7 +24,7 @@ function newBeauty(req, res) {
 }
 
 function deleteBeauty (req, res) {
-   beauty.findByIdAndDelete(req.params.id, function(err, deleteBeauty) {
+   Beauty.findByIdAndDelete(req.params.id, function(err, deleteBeauty) {
         res.redirect('/beauties');
    });
 }
@@ -36,13 +37,20 @@ function create(req, res) {
     })
 }
 
-// function edit (req, res) {
-//     beauty.findById(req.params.id, function (err, beauty){
-//         console.log(beauty)
-//         res.redirect('beauties/new', { title: 'Edit Secret',
-//         beauty })
-//     })
-// }
+function edit (req, res) {
+    Beauty.findById(req.params.id, function (err, beauty){
+        console.log(beauty)
+        res.render('beauties/edit', { title: 'Edit Secret',
+        beauty })
+    })
+}
+function update(req, res) {
+    Beauty.findByIdAndUpdate(req.params.id, req.body, function(err, updateBeauty){
+        console.log(updateBeauty)
+        console.log(req.body)
+        res.redirect('/beauties')
+    })
+}
 
 function show(req, res) {
     Beauty.findById(req.params.id, function (err, beauty) {
