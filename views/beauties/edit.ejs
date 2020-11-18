@@ -3,13 +3,13 @@
 <h1>Edit Your Beauty Secret Here</h1>
 <form action="/beauties/new <%= beauties._id %> ?_method=PUT " method="POST">
     <label>Brand
-        <input type="text" name="brandName">
+        <input type="text" name="brandName" value="<%= beauty.brandName %> ">
     </label>
     <label>Product
-        <input type="text" name="productName">
+        <input type="text" name="productName" value="<%= beauty.productName %> ">
     </label>
     <label> Category
-        <select name="category">
+        <select name="category" value="<%= beauty.category %> ">
             <option value="Oil Based Cleanser">Oil Based Cleanser</option>
             <option value="Water Based Cleanser">Water Based Cleanser</option>
             <option value="Toners/Serums">Toners/Serums</option>
@@ -18,10 +18,10 @@
         </select>
     </label>
     <label>Price: $
-        <input type="text" name="price">
+        <input type="text" name="price" value="<%= beauty.price %> ">
     </label>
     <label>Store:
-        <select name="location">
+        <select name="location" value=<%= beauty.location %> >
             <option value="CVS">CVS</option>
             <option value="Online Retailer">Online Retailer</option>
             <option value="Riley Rose">Riley Rose</option>
@@ -33,7 +33,7 @@
         </select>
     </label>
     <label>
-        <input type="file" name="image" id="img" accept="image/*">
+        <input type="file" name="image" id="img" accept="image/*" value="<%= beauty.image %> ">
     </label>
     <input type="submit" value="Let's go Beautiful">
 <button type="submit"> Save Secret</button>
