@@ -23,12 +23,12 @@ main {
 }
 
 #nav {
-    font-size: 15px;
+    font-size: 20px;
     background-color: var(--pale-color-3);
     color: black;
     padding: 20px;
-    flex-direction: space-between;
-
+    justify-content: space-around;
+    text-decoration: none;
 }
 
 .link {
@@ -51,7 +51,6 @@ h2 {
 .product-container {
     display: flex;
     flex-direction: row;
-
 }
 
 .show-page {
@@ -59,12 +58,14 @@ h2 {
     border-radius: 10px;
     flex-wrap: wrap;
     margin: 20px;
-    width: 250px;
+    width: 300px;
+    box-shadow: 30px 30px 30px 1px #d7d6d6;
+
 }
 
-.brandName {
-    font-weight: bold;
-    font-size: 30px;
+#brandName {
+    font-weight: 700;
+    font-size: 25px;
 }
 
 #product-description {
@@ -77,30 +78,37 @@ h2 {
     text-align: center;
 }
 
-.edit-delete {
-    display: flex;
-    flex-flow: row-reverse wrap;
+.product-image {
+    max-width: 220px;
 }
 
+.edit-delete {
+    display: flex;
+    flex-flow:  wrap;
+}
+
+/* New Beauty */
 #new-beauty {
-    border: 3px solid var(--pale-color-2);
+    border: 5px solid var(--pale-color-2);
     border-radius: 5px;
     margin: 30px;
     padding: 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* max-width: 850px; */
+    align-items: space-evenly;
+    box-shadow: 30px 30px 30px 1px #d7d6d6;
+
 
 }
 
 .list-items {
     justify-content: flex-end;
     flex-direction: column;
-    align-items: flex-end;
+    margin: 20px;
 }
 
-img {
+#new-image {
     width: 33vw;
 }
 
@@ -108,4 +116,12 @@ img {
     /* display: block; */
     margin-right: 0;
     width: 40vw;
+}
+
+
+/* Details Page*/
+
+.info {
+    font-weight: bold;
+    font-size: 30px;
 }

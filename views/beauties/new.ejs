@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <div id="new-beauty">
-    <img src="/images/list-item-img.jpg" alt="">
+    <img id="new-image" src="/images/list-item-img.jpg" alt="">
     <form class="list-items"action="/beauties" method="POST">
         <label>Brand
             <input type="text" name="brandName">
@@ -23,7 +23,7 @@
         </label>
         <label>Store:
             <select name="location">
-                <option value="value="none" selected disabled hidden">Select a location</option>
+                <option value="none" selected disabled hidden>Select a location</option>
                 <option value="CVS">CVS</option>
                 <option value="Online Retailer">Online Retailer</option>
                 <option value="Riley Rose">Riley Rose</option>
@@ -34,10 +34,13 @@
                 <option value="Walmart">Walmart</option>
             </select>
         </label>
-        <label> Image
+        <label> Image 
         <input type="text" name="image" id="img">
         </label>
-        <input type="submit" value="Let's go Beautiful">
+        <label for="">
+
+            <input type="submit" value="Let's go Beautiful">
+        </label>
     </form>
 </div>
 <%- include('../partials/footer') %>
