@@ -2,10 +2,10 @@
 <div class="product-container">
 <% beauties.forEach(function(beauty) {%>
 <div class="show-page">
-   <form action="/beauties/<%= beauty._id%>?_method=DELETE" Method="POST">
+   <form  class="edit-delete" action="/beauties/<%= beauty._id%>?_method=DELETE" Method="POST">
     <button type="submit">X</button>
+    <a  href="/beauties/<%= beauty._id %>/edit ">Edit</a>
     </form>
-    <a href="/beauties/<%= beauty._id %>/edit ">Edit</a>
     <p class="brandName"><%= beauty.brandName %> </p>
     <p class="productName" id="product-description"><%= beauty.productName %> </p>
     <p class="category" id="product-description"><%= beauty.category %> </p>

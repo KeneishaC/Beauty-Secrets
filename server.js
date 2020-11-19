@@ -14,7 +14,7 @@ require('./config/database')
 const homeRouter = require('./routes/home') 
 const beautiesRouter = require('./routes/beauties')
 const notesRouter = require('./routes/notes');
-const { Mongoose } = require('mongoose');
+const Mongoose  = require('mongoose');
 
 //create the express app
 const app = express()
@@ -37,5 +37,5 @@ app.use('/', notesRouter)
 
 //tell the app to listen
 app.listen(port, function(){
-    console.log(`Hey beautiful, express is listening on port: ${port}`)
+    console.log(`Express is listening on port: ${port}`)
 })

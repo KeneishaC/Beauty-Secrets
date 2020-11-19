@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 <div id="new-beauty">
-    <form action="/beauties" method="POST">
+    <img src="/images/list-item-img.jpg" alt="">
+    <form class="list-items"action="/beauties" method="POST">
         <label>Brand
             <input type="text" name="brandName">
         </label>
@@ -32,7 +33,7 @@
             </select>
         </label>
         <label>
-            <input type="file" name="image" id="img" accept="image/*">
+            <input type="text" name="image" id="img">
         </label>
         <input type="submit" value="Let's go Beautiful">
     </form>

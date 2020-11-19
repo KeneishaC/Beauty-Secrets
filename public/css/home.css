@@ -10,11 +10,7 @@
 
 body{
     text-align: center;
-    padding: 250px;
-    border: 9px solid var(--pale-color-1);
-    border-radius: 10px;
-    background-image: url('/public/images/homepage.png');
-
+    
 }
 
 h1{
@@ -26,10 +22,21 @@ h2 {
     color: var(--deep-fuscia-color);
     text-align: center;
 }
+#main-page{
+    margin:  200px;
+    padding: 50px;
+    border: 9px solid var(--pale-color-1);
+    border-radius: 10px;
+    background-image: url('/images/homepage.png?raw=true') repeat-n;
+    
 
-div{
+
+}
+
+.get-started-button{
     border: 5px solid var(--deep-fuscia-color);
+    background-color: var(--deep-fuscia-color);
     border-radius: 5px;
     width: 200px;
-
+    padding: 0 5px 0px 5px;
 }

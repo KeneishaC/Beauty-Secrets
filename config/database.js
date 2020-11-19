@@ -5,8 +5,6 @@ const mongoose = require('mongoose')
 // create shortcut variable 
 const db = mongoose.connection
 
-
-
 //connect to the database
 mongoose.connect(process.env.DATABASE_URL, {
     useCreateIndex: true,

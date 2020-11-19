@@ -1,25 +1,32 @@
 <%- include('../partials/header') %>
-<section>
-    <p>Brand:</p>
-    <p><%= beauty.brandName %> </p>
-    <p>Product:</p>
-    <p><%= beauty.productName %> </p>
-</sectiop
+<div class="info">
+    <section>
+        <p>Brand:</p>
+        <p><%= beauty.brandName %> </p>
+        <p>Product:</p>
+        <p><%= beauty.productName %> </p>
+    </section>
+
+</div>
 
 <h2>Add a note about your secret here</h2>
 
-<form method="POST" action="/beauties/<%= beauty._id %>/reviews">
-    <label>Review</label>
-    <textarea name="content"></textarea>
-    <select name="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
-    <input type="submit" value="Add A New Note">
-</form>
+<div class="note">
+    <form method="POST" action="/beauties/<%= beauty._id %>/notes">
+        <label>Note</label>
+        <textarea name="content"></textarea>
+        <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <input type="submit" value="Add A New Note">
+    </form>
+
+</div>
+
 
 
 
