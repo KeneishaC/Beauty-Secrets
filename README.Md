@@ -30,7 +30,7 @@ Screenshots of App
 
 
 ## Getting Started 
-[clickhere]
+[clickhere](https://beauty-secrets-app.herokuapp.com/) to see deployed app!
 
 
 ### Future Enhancements
