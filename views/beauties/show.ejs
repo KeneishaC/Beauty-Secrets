@@ -4,7 +4,6 @@
         <p><%= beauty.brandName %> </p>
         <p><%= beauty.productName %> </p>
     </section>
-
 </div>
 
 <h2>Add a note about your secret here</h2>
@@ -12,37 +11,30 @@
 <div class="note">
     <form method="POST" action="/beauties/<%= beauty._id %>/notes">
         <textarea name="content"></textarea>
-        <select name="rating">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <input type="submit" value="Add A New Note">
+        <!-- <div> 
+            <select class="rating" name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div> -->
+        <div class="note-button">
+            <input type="submit" value="Add A New Note">
+        </div>
     </form>
-
 </div>
 
 
 
 
+
 <% if (beauty.notes.length) {%>
-<table>
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Note</th>
-            <th>Rating</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% beauty.notes.forEach(function(r) { %>
-        <tr>
-            <td><%= r.createdAt.toLocaleDateString() %></td>
-            <td><%= r.content %> </td>
-            <td><%= r.rating %> </td>
-        </tr>
+            <h2 class="saved-notes">Notes</h2>
+        <% beauty.notes.forEach(function(n) { %>
+            <p class="saved-notes"><%= n.createdAt.toLocaleDateString() %></p>
+            <p class="saved-notes"><%= n.content %> </p>
         <% }); %>
     </tbody>
 </table>
