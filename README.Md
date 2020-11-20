@@ -25,7 +25,7 @@ Beauty Secrets is a crud app that allows users to upload skincare products that 
 
 ![List](./beautysecret.png)
 
-![New](./newsecret.png)
+![New](./newsecrets.png)
 
 ![Notes](./notes.png)
 
