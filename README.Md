@@ -1,6 +1,6 @@
 # Beauty Secrets 
 
-Beauty Secrets is a crud app that allows users to upload skin care products that they enjoy using. The user is able to make notes about each product that they have used. 
+Beauty Secrets is a crud app that allows users to upload skincare products that they enjoy using. The user can make notes about each product that they have used. 
 
 
 ## Technologies Used
@@ -19,14 +19,18 @@ Beauty Secrets is a crud app that allows users to upload skin care products that
 
 ![wireframe](./wireframe.png)
 
-Screenshots of App
-![Home]
+## Screenshots of App
 
-![New]
+![Home](./homepage.png)
 
-![List]
+![List](./beautysecret.png)
 
-![Notes]
+![New](./newsecret.png)
+
+![Notes](./notes.png)
+
+![Edit](./editsecret.png)
+
 
 
 ## Getting Started 
