@@ -34,7 +34,10 @@ Beauty Secrets is a crud app that allows users to upload skincare products that 
 
 
 ## Getting Started 
-[clickhere](https://beauty-secrets-app.herokuapp.com/) to see deployed app!
+[click here](https://trello.com/b/YLOzy5XN/project-2) to see trello board!
+
+
+[click here](https://beauty-secrets-app.herokuapp.com/) to see deployed app!
 
 
 ### Future Enhancements
