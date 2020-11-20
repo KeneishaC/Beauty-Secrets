@@ -85,6 +85,7 @@ h2 {
 .edit-delete {
     display: flex;
     flex-flow:  wrap;
+    color: #cdcdcd;
 }
 
 /* New Beauty */
@@ -114,7 +115,6 @@ h2 {
 }
 
 .list-items>label {
-    /* display: block; */
     margin-right: 0;
     width: 40vw;
 }

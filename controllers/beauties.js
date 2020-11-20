@@ -55,7 +55,7 @@ function update(req, res) {
 function show(req, res) {
     Beauty.findById(req.params.id, function (err, beauty) {
         console.log(beauty)
-        res.render('beauties/show', {title: 'More this beauty secret',
+        res.render('beauties/show', {title: 'Beauty secret',
             beauty
         })
     })

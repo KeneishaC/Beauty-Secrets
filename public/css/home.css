@@ -14,7 +14,7 @@ body{
 }
 
 h1{
-    font-size: 45px;
+    font-size: 55px;
 }
 
 h1,
@@ -34,10 +34,15 @@ h2 {
 }
 
 .get-started-button{
-    border: 5px solid var(--deep-fuscia-color);
-    background-color: var(--deep-fuscia-color);
+    border: 5px solid var(--pale-color-2);
+    background-color: var(--pale-color-2);
     border-radius: 5px;
     width: 200px;
     padding: 0 5px 0px 5px;
     text-decoration: none;
+    color: var(--deep-fuscia-color);
+}
+
+.get-started-button:hover {
+    background-color: var(--pale-color-3);
 }
