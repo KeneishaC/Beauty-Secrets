@@ -33,7 +33,7 @@
 <% if (beauty.notes.length) {%>
             <h2 class="saved-notes">Notes</h2>
         <% beauty.notes.forEach(function(n) { %>
-            <p class="saved-notes"><%= n.createdAt.toLocaleDateString() %></p>
+            <p class="saved-notes"><%= n.createdAt.toLocaleDateString()%>: </p>
             <p class="saved-notes"><%= n.content %> </p>
         <% }); %>
     </tbody>

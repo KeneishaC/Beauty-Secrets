@@ -20,6 +20,7 @@ body {
 main {
     text-align: center;
     width: 100%;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 #nav {
@@ -35,7 +36,7 @@ main {
     display: flex;
     color: var(--deep-fuscia-color);
     text-decoration: none;
-
+    
 }
 
 h1 {
@@ -46,6 +47,7 @@ h1,
 h2 {
     color: var(--deep-fuscia-color);
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .product-container {
