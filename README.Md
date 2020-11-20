@@ -40,3 +40,4 @@ Beauty Secrets is a crud app that allows users to upload skincare products that 
 ### Future Enhancements
 - add authentication for users
 - add authentication for users to add each other as friends.
+- Add function for users to upload images of products directly from their laptops/tablets/mobile devices.
